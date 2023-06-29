@@ -1,11 +1,11 @@
 @use "sass:map";
 /// общие
-$mainBg: #fff; // main bg-color
+$mainBg: #f2f2f2; // main bg-color
 $headerBG: #fff; // header bg-color
-$footerBg: #0C1111; // footer bg-color
+$footerBg: #0c1111; // footer bg-color
 $accentColor: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%); // акцентный цвет и цвет скроллбара
 $accentColorTwo: #333; // второй акцентный цвет и цвет скроллбара
-$widthContainer: 1200; // max-width
+$widthContainer: 1680; // max-width
 
 
 $family: 'Open Sans', sans-serif; // font-family дефолтный шрифт
@@ -16,8 +16,8 @@ $generalBigTextSizeMin: 16; // font-size текст который надо сд
 $generalTextSize: 16; // font-size основного текста
 $generalTextSizeMin: 14; // font-size основного текста для экрана 320px
 
-$generalLineHeight: 1.5em; // line-height основного текста
-$generalBigLineHeight: 1.5em; // line-height основного болшого текста
+$generalLineHeight: 1.3em; // line-height основного текста
+$generalBigLineHeight: 1.3em; // line-height основного болшого текста
 $letterSpacing: 0.02em;
 
 $generalColorText: #fbfbfb; // color основного текста

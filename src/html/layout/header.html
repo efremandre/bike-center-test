@@ -1,19 +1,93 @@
 <header class="header">
-	<div data-header class="header__navigation navigation">
-		<div class="container">
-			<div class="navigation__wrapper">
-				@@include('../modules/logo.html', {
-				'class-logo-wrapper': 'navigation__logo',
-				'class-logo-link': 'navigation__logo-link'
-				})
-				<nav class="navigation__nav nav" data-nav>
-					<ul class="nav__list">
-						<li><a href="#" class="nav__link">Item 1</a></li>
-						<li><a href="#" class="nav__link">Item 2</a></li>
-						<li><a href="#" class="nav__link">Item 3</a></li>
-						<li><a href="#" class="nav__link">Item 4</a></li>
-					</ul>
-				</nav>
+	<div class="header__navigation navigation">
+		<div class="navigation__top-block nav-top">
+			<div class="container">
+				<div class="nav-top__wrapper">
+					<div class="nav-top__column">
+						<div class="nav-top__place-marker">
+							<a href="#">Архангельск-на-под</a>
+						</div>
+						<div class="nav-top__contacts">
+							<a href="#" class="nav-top__address">
+								<address>ул. Дорожная, 1Е и еще 3</address>
+							</a>
+							<div class="nav-top__phones">
+								<a href="tel:78005000320" class="nav-top__phone">8 800 500-03-20</a>
+								<span>|</span>
+								<a href="tel:78612000320" class="nav-top__phone">8 861 200-03-20</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav-top__column">
+						<div class="nav-top__buttons">
+							<a href="" class="nav-top__button nav-top__button_services button">Ремонт и обслуживание</a>
+							<a href="" class="nav-top__button button">Прокат оборудования</a>
+						</div>
+						<nav class="nav-top__nav nav" data-nav>
+							<ul class="nav__list">
+								<li><a href="#" class="nav__link">O нас</a></li>
+								<li><a href="#" class="nav__link">Доставка</a></li>
+								<li><a href="#" class="nav__link">Оплата</a></li>
+								<li><a href="#" class="nav__link">Вакансии</a></li>
+								<li><a href="#" class="nav__link">Помощь</a></li>
+								<li><a href="#" class="nav__link">Контакты</a></li>
+							</ul>
+						</nav>
+						@@include('../modules/burger.html', {})
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation__bottom-block nav-bottom">
+			<div class="container">
+				<div class="nav-bottom__row">
+					<div class="nav-bottom__column">
+						@@include('../modules/logo.html', {
+						'class-logo-wrapper': 'navigation__logo',
+						'class-logo-link': 'navigation__logo-link'
+						})
+					</div>
+					<div class="nav-bottom__column nav-bottom__column_center">
+						<button class="nav-bottom__btn-catalog button"><span></span>Каталог</button>
+						<form action="" class="nav-bottom__form">
+							<input type="text">
+							<button title="Поиск" type="submit"><span></span></button>
+						</form>
+					</div>
+					<div class="nav-bottom__column">
+						<button class="nav-bottom__authorization">Вход</button>
+						<ul class="nav-bottom__list">
+							<li><a href="#" class="nav-bottom__link --order">Заказы</a></li>
+							<li><a href="#" class="nav-bottom__link --comparison">Сравнение</a></li>
+							<li><a href="#" class="nav-bottom__link --favorite">Избранное</a></li>
+							<li><a href="#" class="nav-bottom__link --cart">Корзина</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bottom__row">
+					<div class="nav-bottom__column">
+						<ul class="nav-bottom__categories">
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Горные велосипеды"><span>Горные
+										велосипеды</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Детские велосипеды"><span>Детские
+										велосипеды</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Детские самокаты"><span>Детские
+										самокаты</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link"
+									data-link="Электросамокаты"><span>Электросамокаты</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Сноуборды"><span>Сноуборды</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Горные лыжи"><span>Горные лыжи</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-bottom__column">
+						<ul class="nav-bottom__categories">
+							<li><a href="#" class="nav-bottom__categories-link nav-bottom__categories-link_accent"
+									data-link="Распродажа"><span>Распродажа</span></a></li>
+							<li><a href="#" class="nav-bottom__categories-link" data-link="Бренды"><span>Бренды</span></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
