@@ -1,0 +1,13 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+
+.swiper {
+	max-width: 1200px;
+	padding: 20px 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-size: 26px;
+	color: var.$lightColor;
+}

@@ -1,0 +1,17 @@
+@use './base/variable' as var;
+@use './base/mixin' as mix;
+@use './base/extentsions';
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (max-width: 989.98px) {}
+
+@media screen and (max-width: 769.98px) {}
+
+@media screen and (max-width: 569.98px) {}
+
+@media screen and (max-width: 429.98px) {}
+
+@media screen and (max-width: 319.98px) {}
+
+@media (any-hover: none) and (orientation: landscape) {}
