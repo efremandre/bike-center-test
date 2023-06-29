@@ -980,34 +980,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: Circe;
-  font-display: swap;
-  src: url("../assets/fonts/Circe-Bold.woff2") format("woff2"), url("../assets/fonts/Circe-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Circe;
-  font-display: swap;
-  src: url("../assets/fonts/Circe-Regular.woff2") format("woff2"), url("../assets/fonts/Circe-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Mont;
-  font-display: swap;
-  src: url("../assets/fonts/Mont-Bold.woff2") format("woff2"), url("../assets/fonts/Mont-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Mont;
-  font-display: swap;
-  src: url("../assets/fonts/Mont-Regular.woff2") format("woff2"), url("../assets/fonts/Mont-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
 .burger:before, .burger:after, .nav__link:before, .phone__link:after {
   position: absolute;
   content: "";
@@ -1016,15 +988,15 @@ button.swiper-pagination-bullet {
 html,
 body {
   height: 100%;
-  scrollbar-color: #00c821 #fff;
+  scrollbar-color: #333 #fff;
   scrollbar-width: thin;
-  font-family: "Circle", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5em;
   letter-spacing: 0.02em;
   color: #fbfbfb;
   scroll-behavior: smooth;
-  background: #fbfbfb;
+  background: #fff;
 }
 
 * img {
@@ -1062,7 +1034,7 @@ p {
 }
 
 a {
-  font-family: "Circle", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none;
   color: #fff;
 }
@@ -1135,7 +1107,7 @@ a:focus {
   max-width: 500px;
   margin: 0 auto;
   padding: 1em;
-  color: #111;
+  color: #0C1111;
   font-size: calc(14px + 2 * ((100vw - 320px) / 880));
   border-radius: 8px;
   background: #fff;
@@ -1157,7 +1129,7 @@ a:focus {
   margin-bottom: 1em;
   padding: 1em;
   box-sizing: border-box;
-  color: #111;
+  color: #0C1111;
   outline: none;
   border-radius: 8px;
   border: none;
@@ -1165,8 +1137,8 @@ a:focus {
   transition: box-shadow 0.3s ease;
 }
 .form__input > input:-webkit-autofill, .form__input > input:-webkit-autofill:hover, .form__input > input:-webkit-autofill:focus, .form__input > input:-webkit-autofill:active, .form__input > textarea:-webkit-autofill, .form__input > textarea:-webkit-autofill:hover, .form__input > textarea:-webkit-autofill:focus, .form__input > textarea:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #111 inset !important;
-  -webkit-text-fill-color: #111 !important;
+  -webkit-box-shadow: 0 0 0 30px #0C1111 inset !important;
+  -webkit-text-fill-color: #0C1111 !important;
   -webkit-backdrop-filter: unset;
 }
 .form__input > input:focus, .form__input > textarea:focus {
@@ -1206,7 +1178,7 @@ a:focus {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color: #c80000;
+  background-color: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%);
 }
 
 .button {
@@ -1221,7 +1193,7 @@ a:focus {
   color: #fff;
   line-height: 1.5em;
   font-weight: 400;
-  background: #00c821;
+  background: #333;
   border-radius: 8px;
   transition: opacity 0.5s ease;
 }
@@ -1232,13 +1204,13 @@ a:focus {
 }
 
 .button_accent {
-  background-color: #00c821;
+  background-color: #333;
 }
 
 .subtitle {
   margin: 0;
   font-size: calc(22px + 10 * ((100vw - 320px) / 880));
-  font-family: "Mont", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   line-height: 1.5em;
   color: #1d1b1b;
@@ -1260,7 +1232,7 @@ a:focus {
   left: 0;
   padding: 0.5em 0;
   color: #fff;
-  background: #141414;
+  background: #fff;
   transition: transform 0.8s ease;
 }
 .navigation._hidden {
@@ -1388,7 +1360,7 @@ a:focus {
   font-size: calc(8px + 6 * ((100vw - 320px) / 880));
   line-height: 1.3em;
   color: #fff;
-  background-color: #141414;
+  background-color: #0C1111;
 }
 .footer p {
   margin: 0;
@@ -1506,7 +1478,7 @@ a:focus {
     height: 100%;
     top: 0;
     left: 0;
-    background: #c80000;
+    background: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%);
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
