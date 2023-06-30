@@ -4,7 +4,11 @@
 
 @media screen and (min-width: 1200px) {}
 
-@media screen and (max-width: 989.98px) {}
+@media screen and (max-width: 989.98px) {
+	.section__wrapper {
+		width: 100%;
+	}
+}
 
 @media screen and (max-width: 769.98px) {}
 

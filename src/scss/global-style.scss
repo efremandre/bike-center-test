@@ -54,7 +54,6 @@ p {
 a {
 	font-family: var.$family;
 	text-decoration: none;
-	color: var.$lightColor;
 }
 
 a:focus {
@@ -83,6 +82,10 @@ a:focus {
 	padding: 0 1.3em;
 }
 
+.section__wrapper {
+	width: 70%;
+}
+
 .main-section {
 	padding: 20px 0;
 }
@@ -95,3 +98,9 @@ a:focus {
 	letter-spacing: var.$letterSpacing;
 	text-transform: var.$titleTransform;
 }
+
+.darkTextColor {
+	color: var.$titleColor;
+}
+
+.lightcolor {}

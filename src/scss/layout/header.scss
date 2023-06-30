@@ -5,14 +5,16 @@
 $sizeAfterEl: 1.1em;
 
 .navigation {
-	position: fixed;
+	position: relative;
 	z-index: 3;
 	width: 100%;
 	box-sizing: border-box;
 	top: 0;
 	left: 0;
 	color: var.$lightColor;
+	border-bottom: 1px solid #F2F2F2;
 	background: var.$headerBG;
+	box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, .05);
 	transition: transform .8s ease;
 
 	&._hidden {
@@ -26,13 +28,12 @@ $sizeAfterEl: 1.1em;
 }
 
 .nav-top {
-
 	& a {
 		color: #e0e0e0;
 	}
 
 	&__wrapper {
-		@include mix.displayFlex(flex, space-between, center);
+		@include mix.displayFlex(flex, flex-start, center);
 		gap: 20px;
 	}
 
@@ -44,7 +45,7 @@ $sizeAfterEl: 1.1em;
 	}
 
 	&__place-marker {
-		flex: 0 1 20%;
+		flex: 1 1 20%;
 		position: relative;
 		display: block;
 		padding-left: 1.3em;
