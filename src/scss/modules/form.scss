@@ -47,54 +47,32 @@
 }
 
 .form {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	max-width: 640px;
+	border: 1px solid var.$accentColorTwo;
+	border-radius: 10px;
+	background-color: var.$accentColorTwo;
 
-	&__input {
-		position: relative;
-
-		&>input,
-		&>textarea {
-			width: 100%;
-			margin-bottom: 1em;
-			padding: 1em;
-			box-sizing: border-box;
-			color: var.$darkColor;
-			outline: none;
-			border-radius: 8px;
-			border: none;
-			background: var.$lightColor;
-			transition: box-shadow .3s ease;
-
-			&:-webkit-autofill,
-			&:-webkit-autofill:hover,
-			&:-webkit-autofill:focus,
-			&:-webkit-autofill:active {
-				-webkit-box-shadow: 0 0 0 30px var.$darkColor inset !important;
-				-webkit-text-fill-color: var.$darkColor !important;
-				-webkit-backdrop-filter: unset;
-			}
-
-			&:focus {
-				box-shadow: 0 10px 8px -4px rgba(154, 154, 154, .3);
-			}
-		}
-
-		&>textarea {
-			resize: none;
-		}
+	&>input {
+		width: 100%;
+		padding: .7em 1em;
+		border: none;
+		outline: none;
+		border-radius: 9px;
 	}
 
-	&__check {
-		margin-top: 1em;
-		@include mix.adaptivFont(12, 8);
-		line-height: 1.2em;
-		text-align: center;
+	& button {
+		@include mix.displayFlex(flex, center, center);
+		width: 100%;
+		max-width: 80px;
+		background: transparent;
+		transition: opacity .6s ease;
 
-		&>p>a {
-			font-size: 12px;
-			text-decoration: underline;
-
+		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: none;
+				opacity: .6;
 			}
 		}
 	}
