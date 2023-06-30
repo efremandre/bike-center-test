@@ -1254,12 +1254,12 @@ a:focus {
 }
 .nav-top__wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
 .nav-top__column {
-  flex: 0 1 50%;
+  flex: 0 1 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1267,7 +1267,6 @@ a:focus {
   gap: 20px;
 }
 .nav-top__place-marker {
-  flex: 1 1 20%;
   position: relative;
   display: block;
   padding-left: 1.3em;
@@ -1619,13 +1618,13 @@ a:focus {
 .help__cards {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(2, 30%) 40%;
+  grid-template-rows: repeat(2, 0.5fr) 1fr;
   grid-gap: 16px 16px;
 }
 
 .card {
   position: relative;
-  padding: 1em 1.6em;
+  padding: 1.6em;
   font-size: calc(10px + 4 * ((100vw - 320px) / 1360));
   border-radius: 20px;
   background: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%);
