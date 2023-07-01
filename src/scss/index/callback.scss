@@ -1,0 +1,15 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.callback {
+	&__link {
+		text-decoration: underline;
+	}
+
+	@media screen and (max-width: 569.98px) {
+		&__other {
+			display: none;
+		}
+	}
+}

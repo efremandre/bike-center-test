@@ -5,44 +5,149 @@
 $sizeAfterEl: 1.1em;
 
 .navigation {
-	position: fixed;
+	position: relative;
 	z-index: 3;
 	width: 100%;
 	box-sizing: border-box;
 	top: 0;
 	left: 0;
-	padding: .5em 0;
 	color: var.$lightColor;
+	border-bottom: 1px solid #F2F2F2;
 	background: var.$headerBG;
+	box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, .05);
 	transition: transform .8s ease;
 
 	&._hidden {
 		transform: translateY(-150%);
 	}
 
-	&__zero-block {
-		flex: 0 1 220px;
+	&__logo-link {
+
+		&_mobile {
+			display: none;
+		}
+	}
+
+	&__top-block {
+		color: var.$lightColor;
+		background: var.$darkColor;
+	}
+}
+
+.nav-top {
+	& a {
+		color: #e0e0e0;
 	}
 
 	&__wrapper {
 		@include mix.displayFlex(flex, space-between, center);
-		box-sizing: border-box;
-	}
-
-	&__logo {
-		flex: 0 1 auto;
-	}
-
-	&__block {
-		flex: 0 1 auto;
-		@include mix.displayFlex(flex, flex-end, center);
 		gap: 20px;
 	}
 
+	&__column {
+		flex: 0 1 auto;
+		@include mix.displayFlex(flex, flex-start, center);
+		padding: .5em 0;
+		gap: 20px;
+	}
+
+	&__place-marker {
+		position: relative;
+		display: block;
+		padding-left: 1.3em;
+		@include mix.adaptivFont(12, 8);
+		color: #e0e0e0;
+
+		&::before {
+			@extend %pseudoElement;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 10px;
+			height: 10px;
+			background: url('../../assets/images/icon/marker.svg') center center / cover no-repeat;
+		}
+	}
+
+	&__contacts {
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: 1.3em;
+	}
+
+	&__address {
+		flex: 0 1 auto;
+		@include mix.adaptivFont(12, 8);
+		color: #e0e0e0;
+
+		&>address {
+			font-style: normal;
+			text-decoration: underline;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&__phones {
+		@include mix.adaptivFont(14, 12);
+		font-weight: 700;
+	}
+
 	&__phone {
-		@include mix.displayFlex(flex, flex-end, flex-end);
-		flex-direction: column;
-		padding: 1em 0;
+		position: relative;
+		display: inline-block;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 1px;
+			background: var.$lightColor;
+			transition: width .4s ease-in-out, color .4s ease-in-out;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+
+				&:before {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__buttons {
+		flex: 0 1 auto;
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: 16px;
+	}
+
+	&__button {
+		padding: .5em 1em;
+		@include mix.adaptivFont(12, 8);
+		border-radius: 7px;
+	}
+
+	&__button_services {
+		position: relative;
+		padding-left: 2em;
+
+		&::before {
+			@extend %pseudoElement;
+			top: 50%;
+			left: .5em;
+			transform: translateY(-50%);
+			width: 10px;
+			height: 10px;
+			background: url('../../assets/images/icon/clock.svg') center center / cover no-repeat;
+		}
 	}
 }
 
@@ -52,6 +157,7 @@ $sizeAfterEl: 1.1em;
 
 	&__list {
 		@include mix.displayFlex(flex, center, center);
+		gap: 16px;
 	}
 
 	&__item-hidden {
@@ -61,89 +167,228 @@ $sizeAfterEl: 1.1em;
 	&__link {
 		position: relative;
 		display: block;
-		padding: 1em;
+		padding: 0;
+		color: #e0e0e0;
 		font-weight: 400;
-		font-size: #{var.$generalTextSize}+px;
+		@include mix.adaptivFont(12, 8);
 		line-height: var.$generalLineHeight;
-		transition: text-decoration .8s ease;
 
 		&:before {
-			@extend %pseudoElement;
-			bottom: 15px;
-			left: 18px;
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 50%;
+			transform: translateX(-50%);
 			width: 0;
-			height: 2px;
+			height: 1px;
 			background: var.$lightColor;
-			transition: width .5s ease-in-out, color .5s ease-in-out;
+			transition: width .4s ease-in-out, color .4s ease-in-out;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var.$lightColor;
+				color: #fff;
 
 				&:before {
-					width: 70%;
+					width: 100%;
 				}
 			}
 		}
 	}
 }
 
-.phone {
+.nav-bottom {
+	padding: 1em 0;
+
+	&__row {
+		@include mix.displayFlex(flex, space-between, center);
+		gap: 20px;
+
+		&:first-child {
+			margin-bottom: 1.3em;
+		}
+	}
+
+	&__column {
+		display: flex;
+		gap: 20px;
+
+		&_mob {
+			display: none;
+		}
+	}
+
+	&__column_center {
+		flex: 1 1 auto;
+		align-items: stretch;
+	}
+
+	&__btn-catalog {
+		width: 100%;
+		max-width: 140px;
+		font-weight: 500;
+		@include mix.adaptivFont(14, 12);
+		gap: 5px;
+
+		&>span {
+			position: relative;
+			display: block;
+			width: 16px;
+			height: 10px;
+
+			&::before,
+			&::after {
+				@extend %pseudoElement;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				border-radius: 10px;
+				background: var.$lightColor;
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+		}
+	}
+
+	&__form {
+		&>span {
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url('../../assets/images/icon/search.svg') center center / cover no-repeat;
+		}
+	}
+
+	&__authorization {
+		position: relative;
+		width: 100%;
+		max-width: 100px;
+		padding: 1.2em 2em 1.2em 4em;
+		color: var.$accentColorTwo;
+		@include mix.adaptivFont(12, 8);
+		font-weight: 600;
+		border-radius: 20px;
+		background-color: #f2f2f2;
+		transition: opacity .6s ease;
+
+		&::before {
+			@extend %pseudoElement;
+			top: 50%;
+			left: .5em;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			border: 1px solid #e0e0e0;
+			border-radius: 50%;
+			background: url('../../assets/images/icon/person.svg') center center / 60% 60% no-repeat;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: stretch;
+		gap: 16px;
+	}
+
 	&__link {
 		position: relative;
-		padding-left: 1.5em;
-		font-weight: 400;
-		@include mix.adaptivFont(18, var.$generalTextSizeMin);
+		@include mix.displayFlex(flex, center, flex-end);
+		height: 100%;
+		color: #333;
+		@include mix.adaptivFont(12, 8);
+		transition: opacity .4s ease;
 
-		&:after {
+		&::before {
 			@extend %pseudoElement;
-			top: calc(50% - ($sizeAfterEl / 2));
-			left: 0;
-			width: $sizeAfterEl;
-			height: $sizeAfterEl;
-			background: url('../../assets/images/icon/phone.svg') center center / contain no-repeat;
-			animation: callAnimation 1s ease-in-out infinite;
+			top: .5em;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 16px;
+			min-height: 16px;
+		}
+
+		&_order::before {
+			background: url('../../assets/images/icon/orders.svg') center center / cover;
+		}
+
+		&_comparison::before {
+			background: url('../../assets/images/icon/comparison.svg') center center / cover;
+		}
+
+		&_favorite::before {
+			width: 18px;
+			background: url('../../assets/images/icon/favorite.svg') center center / cover;
+		}
+
+		&_cart::before {
+			background: url('../../assets/images/icon/cart.svg') center center / cover;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				opacity: .6;
 			}
 		}
 	}
-}
 
-@keyframes callAnimation {
-	0% {
-		transform: rotate(0);
+	&__categories {
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: 16px;
 	}
 
-	15% {
-		transform: rotate(-12deg);
+	&__categories-link {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		color: var.$darkColor;
+		@include mix.adaptivFont(12, 8);
+		font-weight: 600;
+		text-transform: uppercase;
+
+		&>span {
+			position: relative;
+			display: block;
+			transition: all .4s ease;
+		}
+
+		&::before {
+			content: attr(data-link);
+			position: absolute;
+			z-index: 1;
+			bottom: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			white-space: nowrap;
+			transition: transform .4s ease;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				&>span {
+					transform: translateY(100%);
+				}
+
+				&::before {
+					transform: translateY(100%);
+				}
+			}
+		}
 	}
 
-	40% {
-		transform: rotate(0);
-	}
-
-	50% {
-		transform: rotate(0);
-	}
-
-	60% {
-		transform: rotate(0);
-	}
-
-	70% {
-		transform: rotate(0);
-	}
-
-	85% {
-		transform: rotate(12deg);
-	}
-
-	100% {
-		transform: rotate(0);
+	&__categories-link_accent {
+		color: #ea5455;
 	}
 }

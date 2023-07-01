@@ -1,32 +1,34 @@
 @use "sass:map";
 /// общие
-$mainBg: #fbfbfb; // main bg-color
-$headerBG: #141414; // header bg-color
-$footerBg: #141414; // footer bg-color
-$accentColor: #c80000; // акцентный цвет и цвет скроллбара
-$accentColorTwo: #00c821; // второй акцентный цвет и цвет скроллбара
-$widthContainer: 1200; // max-width
+$mainBg: #fff; // main bg-color
+$headerBG: #fff; // header bg-color
+$footerBg: #0c1111; // footer bg-color
+$accentColor: linear-gradient(90deg, #E2E6EB 0%, #F3F1F5 69.93%);
+// акцентный цвет и цвет скроллбара
+$accentColorTwo: #333; // второй акцентный цвет и цвет скроллбара
+$widthContainer: 1680; // max-width
 
-$family: 'Circle', 'Arial', 'Helvetica', sans-serif; // font-family дефолтный шрифт
-$subFamily: 'Mont', 'Arial', 'Helvetica', sans-serif; // font-family допшрифт шрифт
+
+$family: 'Open Sans', sans-serif; // font-family дефолтный шрифт
+$subFamily: 'Open Sans', sans-serif; // font-family допшрифт шрифт
 
 $generalBigTextSize: 18; // font-size текст который надо сделать чуть больше, чем основной
 $generalBigTextSizeMin: 16; // font-size текст который надо сделать чуть больше, чем основной для экрана 320px
 $generalTextSize: 16; // font-size основного текста
 $generalTextSizeMin: 14; // font-size основного текста для экрана 320px
 
-$generalLineHeight: 1.5em; // line-height основного текста
-$generalBigLineHeight: 1.5em; // line-height основного болшого текста
+$generalLineHeight: 1.3em; // line-height основного текста
+$generalBigLineHeight: 1.3em; // line-height основного болшого текста
 $letterSpacing: 0.02em;
 
-$generalColorText: #fbfbfb; // color основного текста
+$generalColorText: #333; // color основного текста
 $subColorText: #4a4a4a; // color дополнительного текста
 
 /// скроллбар
 $borderRadius: 4px;
 
 /// заголовок главный
-$titleColor: #1d1b1b; // color
+$titleColor: #333; // color
 $titleWeight: 700; // font-weight
 $titleFontSize: 48; // font-size
 $titleFontSizeMin: 28; // font-size
@@ -34,15 +36,14 @@ $titleHeight: 1.1em; // line-height
 $titleTransform: none; // text-transform
 
 /// подзаголовок
-$subTitleColor: #1d1b1b; // color
+$subTitleColor: #333; // color
 $subTitleWeight: 700; // font-weight
-$subTitleFontSize: 32; // font-size
-$subTitleFontSizeMin: 22; // font-size screen 320px
-$subTitleHeight: 1.5em; // line-height
+$subTitleFontSize: 26px; // font-size
+$subTitleFontSizeMin: 26; // font-size screen 320px
+$subTitleHeight: 1.4em; // line-height
 
 /// бургер
 $colorBurger: #fff;
 
-/// кнопка вверх
-$darkColor: #111; // border, background for :before, :after, background for button-up__link
+$darkColor: #0C1111; // border, background for :before, :after, background for button-up__link
 $lightColor: #fff; // hover background for :before, :after
