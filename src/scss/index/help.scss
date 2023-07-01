@@ -22,7 +22,7 @@
 	&__phone {
 		@include mix.displayFlex(flex, flex-start, flex-end);
 		gap: 30px;
-		@include mix.adaptivFont(12, 8);
+		@include mix.adaptivFont(12, 10);
 
 		&>a {
 			@include mix.adaptivFont(24, 20);
@@ -32,7 +32,7 @@
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(11, 1fr);
-		grid-template-rows: repeat(2, .5fr) 1fr;
+		grid-template-rows: repeat(2, .5fr) 260px;
 		grid-gap: 16px 16px;
 	}
 }
@@ -51,6 +51,7 @@
 	}
 
 	&__image {
+		position: absolute;
 		top: -30px;
 	}
 
@@ -97,11 +98,9 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 16px;
-		grid-row-gap: 16px;
+		grid-gap: 16px;
 
 		& .card__image {
-			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
 			width: 264px;
@@ -123,7 +122,6 @@
 
 		& .card__image {
 			grid-area: 1 / 2 / 2 / 3;
-			position: absolute;
 			right: 0;
 			width: 202px;
 			height: 202px;
@@ -141,7 +139,7 @@
 		background: #ff8c00;
 
 		& .card__image {
-			position: absolute;
+			top: -20px;
 			right: 1em;
 			width: 321px;
 			height: 200px;
@@ -151,6 +149,31 @@
 
 	&_4 {
 		grid-area: 2 / 7 / 3 / 12;
+
+		& .card__content {
+			@include mix.displayFlex(flex, space-between, center);
+			gap: 10px;
+		}
+
+		& .card__content-title,
+		& .card__button {
+			flex: 0 1 50%;
+		}
+
+		& .card__button {
+			position: relative;
+			justify-content: flex-start;
+
+			&:before {
+				@extend %pseudoElement;
+				top: 50%;
+				right: 1em;
+				transform: translateY(-50%);
+				width: 16px;
+				height: 16px;
+				background: url('../../assets/images/icon/arrow-btn.svg') center center / cover no-repeat;
+			}
+		}
 	}
 
 	&_5 {
@@ -164,7 +187,6 @@
 		}
 
 		& .card__image {
-			position: absolute;
 			right: 1em;
 			width: 321px;
 			height: 200px;
@@ -184,7 +206,6 @@
 		}
 
 		& .card__image {
-			position: absolute;
 			right: 1em;
 			width: 321px;
 			height: 200px;

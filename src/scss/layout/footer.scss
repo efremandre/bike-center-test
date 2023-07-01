@@ -4,16 +4,23 @@
 @use '../modules/logo';
 
 .footer {
-	padding: 1em 0;
+	overflow: hidden;
+	box-sizing: border-box;
 	color: #fff;
+	border-radius: 10px 10px 0px 0px;
 	background: var.$footerBg;
-
-	&__top {}
 
 	&__bottom {
 		padding: 1em 0;
 		color: #828282;
 		border-top: 1px solid var.$accentColorTwo;
+	}
+
+	@media screen and (max-width: 569.98px) {
+		&__bottom {
+			padding: 2em 0;
+			color: #f2f2f2;
+		}
 	}
 
 	&__wrapper {
@@ -58,6 +65,12 @@
 
 			& .footer__item_1 {
 				grid-area: 1 / 1 / 3 / 2;
+
+				&>img {
+					display: block;
+					overflow: hidden;
+					border-radius: 7px;
+				}
 			}
 
 			& .footer__item_2 {
@@ -103,8 +116,6 @@
 	&__list-title_little {
 		@include mix.adaptivFont(18, 14);
 	}
-
-	&__list {}
 
 	&__list_social {
 		@include mix.displayFlex(flex, flex-end, center);
@@ -179,6 +190,234 @@
 			@include mix.adaptivFont(14, 10);
 			border-radius: 9px;
 			background: #333;
+		}
+	}
+}
+
+@media screen and (min-width: 569.98px) {
+	.footer {
+		padding: 1em 0;
+		border-radius: 0;
+	}
+
+	.footer-mob {
+		display: none;
+
+		&__app {
+			display: none;
+		}
+	}
+
+}
+
+.footer-mob {
+
+	padding: 2em 0;
+	font-size: 16px;
+
+	&__item {
+		position: relative;
+		width: 100%;
+
+		&:after {
+			@extend %pseudoElement;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 15px;
+			height: 10px;
+			background: url('../../assets/images/icon/arrow-mob-footer.svg') center center / contain no-repeat;
+		}
+	}
+
+	&__app {
+		padding: 2em 1em;
+		background: #333;
+	}
+
+	&__title {
+		margin-top: 0;
+		font-size: 16px;
+
+		&_help {
+			font-size: 20px;
+		}
+
+		&_subscribe {
+			font-size: 14px;
+			color: #bdbdbd;
+			font-weight: 400;
+		}
+	}
+
+	&__list-app {
+		@include mix.displayFlex(flex, center, center);
+		gap: 16px;
+	}
+
+	&__app-item {
+		flex: 0 1 50%;
+	}
+
+	&__app-link {
+		box-sizing: border-box;
+		@include mix.displayFlex(flex, center, center);
+		width: 100%;
+		padding: 1em;
+		border-radius: 7px;
+		background: #000;
+	}
+
+	&__contacts-block {}
+
+	&__address {
+		display: block;
+		padding: 1em 0;
+		font-size: 16px;
+		text-decoration: underline;
+		color: #fff;
+	}
+
+	&__work-time {
+		padding: 1em 0;
+	}
+
+	&__list-contacts {
+		margin: 2em 0;
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		padding: 1em 0;
+		font-size: 16px;
+		color: #f2f2f2;
+
+		&_wa,
+		&_tg {
+			position: relative;
+			padding-left: 3em;
+
+			&:before {
+				@extend %pseudoElement;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 17px;
+				height: 17px;
+			}
+
+			&:after {
+				@extend %pseudoElement;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				width: 10px;
+				height: 10px;
+				background: url('../../assets/images/icon/arrow-mob-footer.svg') center center / contain no-repeat;
+			}
+		}
+
+		&_wa {
+			border-bottom: 1px solid #333;
+
+			&:before {
+				background: url('../../assets/images/icon/wa-footer.svg') center center / contain no-repeat;
+			}
+		}
+
+		&_tg {
+			&:before {
+				background: url('../../assets/images/icon/tg-footer.svg') center center / contain no-repeat;
+			}
+		}
+
+		&_help {
+			position: relative;
+			padding-left: 2em;
+
+			&:before {
+				@extend %pseudoElement;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 17px;
+				height: 17px;
+			}
+
+			&.--pay {
+				&:before {
+					background: url('../../assets/images/icon/pay-mob.svg') center center / contain no-repeat;
+				}
+			}
+
+			&.--delivery {
+				&:before {
+					background: url('../../assets/images/icon/deliv-mob.svg') center center / contain no-repeat;
+				}
+			}
+
+			&.--contact {
+				&:before {
+					background: url('../../assets/images/icon/contact-mob.svg') center center / contain no-repeat;
+				}
+			}
+
+			&.--feedback {
+				&:before {
+					background: url('../../assets/images/icon/feedback-mob.svg') center center / contain no-repeat;
+				}
+			}
+		}
+	}
+
+	&__contacts-phone {
+		@include mix.displayFlex(flex, center, center);
+		margin-bottom: 2em;
+		padding: 1.3em 1em;
+		color: #f2f2f2;
+		border-radius: 7px;
+		background: #EB5757;
+	}
+
+	&__help {
+		padding: 1em 0;
+		border-bottom: 1px solid #333;
+	}
+
+	&__list-help {}
+
+	&__nav {
+		padding: 1em 0;
+	}
+
+	&__list-nav {}
+
+	&__link-nav {}
+
+	&__subscribe {}
+
+	&__form {
+		background: #0c1111;
+	}
+
+	&__input {
+		background: transparent;
+	}
+
+	&__btn {
+		position: relative;
+		border-radius: 7px;
+		background: #828282;
+
+		&:before {
+			@extend %pseudoElement;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			width: 16px;
+			height: 16px;
+			background: url('../../assets/images/icon/arrow-btn-form.svg') center center / contain no-repeat;
 		}
 	}
 }

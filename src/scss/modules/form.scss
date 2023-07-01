@@ -55,7 +55,7 @@
 	border-radius: 10px;
 	background-color: var.$accentColorTwo;
 
-	&>input {
+	&__input {
 		width: 100%;
 		padding: .7em 1em;
 		border: none;
@@ -63,12 +63,19 @@
 		border-radius: 9px;
 	}
 
-	& button {
+	&__btn {
 		@include mix.displayFlex(flex, center, center);
 		width: 100%;
 		max-width: 80px;
 		background: transparent;
 		transition: opacity .6s ease;
+
+		&>span {
+			display: block;
+			width: 14px;
+			height: 14px;
+			background: url('../../assets/images/icon/search.svg') center center / cover no-repeat;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

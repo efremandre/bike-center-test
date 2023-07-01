@@ -2,20 +2,188 @@
 @use './base/mixin' as mix;
 @use './base/extentsions';
 
-@media screen and (min-width: 1200px) {}
+@media screen and (max-width: 1256px) {
+	.card {
+		&_1 {}
+
+		&_2 {
+			& .card__image {
+				display: none;
+			}
+		}
+
+		&_3 {}
+
+		&_4 {}
+
+		&_5 {
+			& .card__image {
+				width: 260px;
+				height: 140px;
+			}
+		}
+
+		&_6 {
+			& .card__image {
+				width: 260px;
+				height: 140px;
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 989.98px) {
 	.section__wrapper {
 		width: 100%;
 	}
+
+	.navigation {
+		background: #0c1111;
+
+		&__logo {
+			max-width: 120px;
+		}
+
+		&__logo-link {
+
+			&_nomobile {
+				display: none;
+			}
+
+			&_mobile {
+				display: block;
+			}
+		}
+	}
+
+	.nav-bottom {
+		padding: 0;
+
+		&__row {
+			&:first-child {
+				margin-bottom: 0;
+			}
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		&__column_center,
+		&__column_desktop {
+			display: none;
+		}
+
+		&__column_mob {
+			@include mix.displayFlex(flex, space-between, center);
+			gap: 20px;
+		}
+
+		&__form,
+		&__authorization,
+		&__list,
+		&__btn-catalog {
+			display: none;
+		}
+	}
+
+	.nav-top {
+		display: none;
+	}
+
+	.help {
+		&__cards {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 1rf);
+		}
+	}
+
+	.card {
+		@include mix.displayFlex(flex, space-between, center);
+
+		&__title {
+			margin-bottom: .5em;
+		}
+
+		&__image {
+			position: static;
+			transform: translateX(0);
+		}
+
+		&__item-link {
+			margin-top: 0.5em;
+		}
+
+		&_1 {
+			grid-area: 1 / 1 / 2 / 2;
+			flex-direction: row-reverse;
+
+			& .card__image {
+				transform: translateX(0);
+			}
+		}
+
+		&_2 {
+			grid-area: 2 / 1 / 3 / 2;
+			flex-direction: row-reverse;
+
+			& .card__image {
+				display: block;
+			}
+
+			& .card__title {
+				margin-bottom: 1em;
+			}
+		}
+
+		&_3 {
+			grid-area: 3 / 1 / 4 / 2;
+		}
+
+		&_4 {
+			grid-area: 4 / 1 / 5 / 2;
+		}
+
+		&_5 {
+			grid-area: 5 / 1 / 6 / 2;
+		}
+
+		&_6 {
+			grid-area: 6 / 1 / 7 / 2;
+		}
+	}
 }
 
-@media screen and (max-width: 769.98px) {}
 
-@media screen and (max-width: 569.98px) {}
+@media screen and (max-width: 569.98px) {
+	.subtitle {
+		margin-bottom: 1em;
+	}
+
+	.help {
+		&__header {
+			display: block;
+			margin: 0;
+		}
+
+		&__phone {
+			display: block;
+		}
+
+		&__cards-wrapper {
+			display: none;
+		}
+	}
+
+	.footer {
+		&__wrapper {
+			display: none;
+		}
+	}
+}
 
 @media screen and (max-width: 429.98px) {}
 
-@media screen and (max-width: 319.98px) {}
+@media screen and (max-width: 375px) {}
 
 @media (any-hover: none) and (orientation: landscape) {}

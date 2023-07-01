@@ -21,6 +21,13 @@ $sizeAfterEl: 1.1em;
 		transform: translateY(-150%);
 	}
 
+	&__logo-link {
+
+		&_mobile {
+			display: none;
+		}
+	}
+
 	&__top-block {
 		color: var.$lightColor;
 		background: var.$darkColor;
@@ -205,6 +212,10 @@ $sizeAfterEl: 1.1em;
 	&__column {
 		display: flex;
 		gap: 20px;
+
+		&_mob {
+			display: none;
+		}
 	}
 
 	&__column_center {

@@ -35,7 +35,6 @@
 								<li><a href="#" class="nav__link">Контакты</a></li>
 							</ul>
 						</nav>
-						@@include('../modules/burger.html', {})
 					</div>
 				</div>
 			</div>
@@ -44,6 +43,8 @@
 			<div class="container">
 				<div class="nav-bottom__row">
 					<div class="nav-bottom__column">
+						@@include('../modules/burger.html', {})
+
 						@@include('../modules/logo.html', {
 						'class-logo-wrapper': 'navigation__logo',
 						'class-logo-link': 'navigation__logo-link'
@@ -51,12 +52,12 @@
 					</div>
 					<div class="nav-bottom__column nav-bottom__column_center">
 						<button class="nav-bottom__btn-catalog button"><span></span>Каталог</button>
-						<form action="" class="nav-bottom__form form">
-							<input type="text">
-							<button title="Поиск" type="submit"><span></span></button>
+						<form action="#" class="nav-bottom__form form">
+							<input class="form__input" type="text">
+							<button class="form__btn" title="Поиск" type="submit"><span></span></button>
 						</form>
 					</div>
-					<div class="nav-bottom__column">
+					<div class="nav-bottom__column nav-bottom__column_desktop">
 						<button class="nav-bottom__authorization">Вход</button>
 						<ul class="nav-bottom__list">
 							<li><a href="#" class="nav-bottom__link --order">Заказы</a></li>
@@ -64,6 +65,14 @@
 							<li><a href="#" class="nav-bottom__link --favorite">Избранное</a></li>
 							<li><a href="#" class="nav-bottom__link --cart">Корзина</a></li>
 						</ul>
+					</div>
+					<div class="nav-bottom__column_mob">
+						<button class="nav-bottom__search-mobile" title="Поиск">
+							<img src="../../assets/images/icon/search.svg" alt="Поиск">
+						</button>
+						<a href="#" class="nav-bottom__cart-mobile">
+							<img src="../../assets/images/icon/cart-mobile.svg" alt="Корзина">
+						</a>
 					</div>
 				</div>
 				<div class="nav-bottom__row">

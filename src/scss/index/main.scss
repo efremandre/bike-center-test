@@ -23,32 +23,6 @@
 			list-style: disc;
 			list-style-position: inside;
 		}
-
-		& a {
-			position: relative;
-			display: inline-block;
-			color: var.$generalColorText;
-
-			&:before {
-				content: '';
-				position: absolute;
-				bottom: -2px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 0;
-				height: 1px;
-				background: var.$generalColorText;
-				transition: width .4s ease-in-out;
-			}
-
-			@media (any-hover: hover) {
-				&:hover {
-					&:before {
-						width: 100%;
-					}
-				}
-			}
-		}
 	}
 
 	&__callback {

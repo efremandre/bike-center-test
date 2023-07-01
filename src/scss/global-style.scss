@@ -103,4 +103,13 @@ a:focus {
 	color: var.$titleColor;
 }
 
-.lightcolor {}
+.section__link {
+	color: #333;
+
+	@media (any-hover: hover) {
+		button:hover {
+			cursor: pointer;
+		}
+	}
+
+}

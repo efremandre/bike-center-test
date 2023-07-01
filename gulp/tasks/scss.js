@@ -1,11 +1,11 @@
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-import rename from 'gulp-rename';
+import rename from 'gulp-rename'
+import gulpSass from 'gulp-sass'
+import dartSass from 'sass'
 
-import cleanCss from 'gulp-clean-css'; // сжатие CSS файла
+import cleanCss from 'gulp-clean-css' // сжатие CSS файла
 // import webpcss from 'gulp-webpcss'; // вывод webp изображений
-import autoprefixer from 'gulp-autoprefixer'; // добавление вендорных префиксов
-import groupCssMediaQueries from 'gulp-group-css-media-queries'; // группировка медиа запросов
+import autoprefixer from 'gulp-autoprefixer' // добавление вендорных префиксов
+import groupCssMediaQueries from 'gulp-group-css-media-queries' // группировка медиа запросов
 
 const sass = gulpSass(dartSass)
 
@@ -51,5 +51,5 @@ export const scss = () => {
 			extname: '.min.css'
 		}))
 		.pipe(app.gulp.dest(app.path.build.css))
-		.pipe(app.plugins.browsersync.stream());
+		.pipe(app.plugins.browsersync.stream())
 }
