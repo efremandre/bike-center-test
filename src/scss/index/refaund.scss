@@ -1,3 +1,11 @@
 @use '../base/variable' as var;
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
+
+.refaund {
+
+	&__image,
+	&__description-mob {
+		display: none;
+	}
+}

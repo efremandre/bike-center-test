@@ -54,7 +54,7 @@
 
 			& .footer__list {
 				display: grid;
-				grid-template-columns: repeat(4, auto);
+				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: repeat(2, 1fr);
 				grid-gap: 8px;
 
@@ -74,7 +74,7 @@
 			}
 
 			& .footer__item_2 {
-				grid-area: 1 / 2 / 2 / 3;
+				grid-area: 1 / 2 / 2 / 4;
 
 				&>a {
 					display: grid;
@@ -86,7 +86,7 @@
 			}
 
 			& .footer__item_3 {
-				grid-area: 2 / 2 / 3 / 3;
+				grid-area: 2 / 2 / 3 / 4;
 
 				&>a {
 					display: grid;
@@ -211,7 +211,6 @@
 }
 
 .footer-mob {
-
 	padding: 2em 0;
 	font-size: 16px;
 
@@ -267,8 +266,6 @@
 		border-radius: 7px;
 		background: #000;
 	}
-
-	&__contacts-block {}
 
 	&__address {
 		display: block;
@@ -390,12 +387,6 @@
 	&__nav {
 		padding: 1em 0;
 	}
-
-	&__list-nav {}
-
-	&__link-nav {}
-
-	&__subscribe {}
 
 	&__form {
 		background: #0c1111;

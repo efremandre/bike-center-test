@@ -1,5 +1,8 @@
 @use '../base/variable' as var;
 @use 'help';
+@use 'callback';
+@use 'refaund';
+@use 'garanty';
 
 .main {
 	flex: 1 1 auto;
@@ -13,7 +16,6 @@
 	&__callback {
 		padding: 1em 0;
 
-		& h2,
 		& p,
 		& ul {
 			margin-bottom: 1em;
@@ -21,7 +23,8 @@
 
 		& ul {
 			list-style: disc;
-			list-style-position: inside;
+			list-style-position: outside;
+			margin-left: 1.3em;
 		}
 	}
 

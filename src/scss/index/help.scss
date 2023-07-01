@@ -22,10 +22,10 @@
 	&__phone {
 		@include mix.displayFlex(flex, flex-start, flex-end);
 		gap: 30px;
-		@include mix.adaptivFont(12, 10);
+		font-size: 12px;
 
 		&>a {
-			@include mix.adaptivFont(24, 20);
+			font-size: 24px;
 		}
 	}
 
@@ -84,7 +84,39 @@
 		padding: 1em;
 	}
 
+	&_mobile {
+		display: none;
+		padding: 0;
+		background: none;
+
+		& .card__title {
+			margin-bottom: 2.6em;
+		}
+
+		& .card__content {
+			position: relative;
+			padding: 7em 1.6em 1.6em;
+			border-radius: 20px;
+			background: var.$accentColor;
+		}
+
+		& .card__image {
+			position: absolute;
+			left: 50%;
+			top: -30px;
+			transform: translateX(-50%);
+			width: 260px;
+			height: 143px;
+			background: url('../../assets/images/help/delivery.png') center top / contain no-repeat;
+		}
+
+		& .card__description {
+			margin-bottom: 1em;
+		}
+	}
+
 	&_3,
+	&_4,
 	&_5,
 	&_6 {
 		display: grid;
@@ -149,20 +181,11 @@
 
 	&_4 {
 		grid-area: 2 / 7 / 3 / 12;
-
-		& .card__content {
-			@include mix.displayFlex(flex, space-between, center);
-			gap: 10px;
-		}
-
-		& .card__content-title,
-		& .card__button {
-			flex: 0 1 50%;
-		}
+		align-items: center;
 
 		& .card__button {
 			position: relative;
-			justify-content: flex-start;
+
 
 			&:before {
 				@extend %pseudoElement;
@@ -211,5 +234,9 @@
 			height: 200px;
 			background: url('../../assets/images/help/delivery.png') center top / contain no-repeat;
 		}
+	}
+
+	&_mobile {
+		display: none;
 	}
 }

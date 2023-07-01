@@ -1,0 +1,37 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.garanty {
+	display: none;
+	padding: 2em 0;
+
+	&__content-title {}
+
+	&__title {}
+
+	&__description {
+		margin-bottom: 1em;
+	}
+
+	&__button {
+
+		max-width: 100%;
+		padding: 1em 1.6em;
+
+		&>span {
+			position: relative;
+			display: block;
+
+			&:before {
+				@extend %pseudoElement;
+				top: 50%;
+				right: -24px;
+				transform: translateY(-50%);
+				width: 16px;
+				height: 16px;
+				background: url('../../assets/images/icon/arrow-btn.svg') center center / cover no-repeat;
+			}
+		}
+	}
+}

@@ -6,4 +6,10 @@
 	&__link {
 		text-decoration: underline;
 	}
+
+	@media screen and (max-width: 569.98px) {
+		&__other {
+			display: none;
+		}
+	}
 }

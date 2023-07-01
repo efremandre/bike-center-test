@@ -165,10 +165,18 @@
                                     <a href="#" class="card__button button">Напишите нам в чат</a>
                                 </div>
                             </li>
+                            <li class="card card_mobile">
+                                <h3 class="card__title subtitle">Доставка</h3>
+                                <div class="card__content">
+                                    <div class="card__image"></div>
+                                    <p class="card__description">Стоимость доставки будет зависеть от города в котором вы находитесь</p>
+                                    <a href="#" class="card__button button">Узнать подробнее</a>
+                                </div>
+                            </li>
                             <li class="card card_2">
                                 <div class="card__image"></div>
                                 <div class="card__content">
-                                    <h3 class="card__title">Оплата</h3>
+                                    <h3 class="card__title subtitle">Оплата</h3>
                                     <ul class="card__description-list">
                                         <li><a href="#" class="card__item-link">Как оплатить заказ</a></li>
                                         <li><a href="#" class="card__item-link">Наложенный платёж</a></li>
@@ -190,13 +198,11 @@
                                 <div class="card__image"></div>
                             </li>
                             <li class="card card_4">
-                                <div class="card__content">
-                                    <div class="card__content-title">
-                                        <h3 class="card__title">Гарантия</h3>
-                                        <p class="card__description">Информацию по всем вопросам гарантии можно узнать тут. </p>
-                                    </div>
-                                    <a href="#" class="card__button button">Гарантийные талоны</a>
+                                <div class="card__content-title">
+                                    <h3 class="card__title">Гарантия</h3>
+                                    <p class="card__description">Информацию по всем вопросам гарантии можно узнать тут. </p>
                                 </div>
+                                <a href="#" class="card__button button">Гарантийные талоны</a>
                             </li>
                             <li class="card card_5">
                                 <div class="card__content">
@@ -225,13 +231,13 @@
                     <div class="section__wrapper">
                         <p>Мы делаем все возможное, чтобы максимально облегчить вам оформление заказа. Для того, чтобы сделать это:</p>
                         <ul>
-                            <li>Перейдите в раздел «Каталог»;</li>
+                            <li>Перейдите в раздел <a href="#" class="section__link">«Каталог»</a>;</li>
                             <li>под понравившимся вам товаром нажать на зеленую кнопку «Купить»: это отправляет ваш заказ в виртуальную
                                 корзину;</li>
                             <li>переходите в корзину и оформляете заказ;</li>
                             <li>система автоматически зарегистрирует вас;</li>
                             <li>ожидайте смс и email уведомления о статусе вашего заказа. При возникновении вопросов будем рады помочь по
-                                телефону <a lass="section__link" href="tel:+78005000320">8(800)500-03-20</a>.</li>
+                                телефону <a class="section__link" href="tel:+78005000320">8(800)500-03-20</a>.</li>
                         </ul>
                     </div>
                 </div>
@@ -239,12 +245,16 @@
             <section class="main__refaund refaund">
                 <div class="container">
                     <h2 class="refaund__title subtitle">Легкий возврат</h2>
-                    <div class="section__wrapper">
-                        <p>Покупайте, пробуйте, вам понравится, если нет, мы вернем вам деньги! Без вопросов, заявлений и дополнительных
+                    <div class="section__wrapper refaund__body">
+                        <div class="refaund__image"></div>
+                        <p class="refaund__description-desctop">Покупайте, пробуйте, вам понравится, если нет, мы вернем вам деньги! Без
+                            вопросов, заявлений и дополнительных
                             комиссий.
                             Вы вправе передумать. Мы в «Байк Центре» понимаем это, и с радостью сделаем вам обмен на понравившийся вам товар
                             или вернём деньги.</p>
-                        <ul>
+                        <p class="refaund__description-mob">Мы в «Байк Центре» понимаем это, и с радостью сделаем вам обмен на
+                            понравившийся вам товар или вернём деньги.</p>
+                        <ul class="refaund__list">
                             <li>Свяжитесь с нами по телефону или онлайн-чаты. Мы оформим вам бланк возврата и вышлем его вам на электронную
                                 почту; </li>
                             <li>распечатайте и заполните бланк, его нужно будет сдать вместе с заказом на указанном нами пункте выдачи ;
@@ -263,6 +273,17 @@
                     </div>
                 </div>
             </section>
+            <section class="main__garanty garanty">
+                <div class="container">
+                    <div class="garanty__content-title">
+                        <h3 class="garanty__title subtitle">Гарантия</h3>
+                        <p class="garanty__description">Информацию по всем вопросам, связанным с обменом, возвратом, ремонтом и
+                            взаимодействием с сервисным центром, вы можете уточнить непосредственно у сотрудников магазина или по телефону
+                            горячей линии.</p>
+                    </div>
+                    <a href="#" class="garanty__button button"><span>Гарантийные талоны</span></a>
+                </div>
+            </section>
             <section class="main__callback callback">
                 <div class="container">
                     <h2 class="callback__title subtitle">Обратная связь</h2>
@@ -275,8 +296,10 @@
                             <li>написав отзыв о работе «Байк Центра».</li>
                         </ul>
 
-                        <h3>Не нашли то что нужно?</h3>
-                        <p>Позвоните нам по номеру <a class="section__link" href="tel:+7800000000000">8 (800) 000000000</a></p>
+                        <div class="callback__other">
+                            <h3>Не нашли то что нужно?</h3>
+                            <p>Позвоните нам по номеру <a class="section__link" href="tel:+7800000000000">8 (800) 000000000</a></p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -353,7 +376,7 @@
                         <div class="footer__block footer__block_5">
                             <h3 class="footer__list-title footer__list-title_little">Узнавай о скидках первым</h3>
                             <form action="#" class="footer__form form">
-                                <input class="form__input" name="mail" type="email" required>
+                                <input class="form__input" name="mail" type="email" placeholder="Ведите свой e-mail" required>
                                 <button class="form__btn" title="Подписаться на новости" type="submit">Подписаться</button>
                             </form>
                         </div>

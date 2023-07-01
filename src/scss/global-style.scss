@@ -105,6 +105,7 @@ a:focus {
 
 .section__link {
 	color: #333;
+	text-decoration: underline;
 
 	@media (any-hover: hover) {
 		button:hover {
