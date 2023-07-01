@@ -329,7 +329,10 @@
 			}
 		}
 
-		&_help {
+		&_pay,
+		&_delivery,
+		&_contact,
+		&_feedback {
 			position: relative;
 			padding-left: 2em;
 
@@ -342,25 +345,25 @@
 				height: 17px;
 			}
 
-			&.--pay {
+			&_pay {
 				&:before {
 					background: url('../../assets/images/icon/pay-mob.svg') center center / contain no-repeat;
 				}
 			}
 
-			&.--delivery {
+			&_delivery {
 				&:before {
 					background: url('../../assets/images/icon/deliv-mob.svg') center center / contain no-repeat;
 				}
 			}
 
-			&.--contact {
+			&_contact {
 				&:before {
 					background: url('../../assets/images/icon/contact-mob.svg') center center / contain no-repeat;
 				}
 			}
 
-			&.--feedback {
+			&_feedback {
 				&:before {
 					background: url('../../assets/images/icon/feedback-mob.svg') center center / contain no-repeat;
 				}

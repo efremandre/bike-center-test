@@ -319,20 +319,20 @@ $sizeAfterEl: 1.1em;
 			min-height: 16px;
 		}
 
-		&.--order::before {
+		&_order::before {
 			background: url('../../assets/images/icon/orders.svg') center center / cover;
 		}
 
-		&.--comparison::before {
+		&_comparison::before {
 			background: url('../../assets/images/icon/comparison.svg') center center / cover;
 		}
 
-		&.--favorite::before {
+		&_favorite::before {
 			width: 18px;
 			background: url('../../assets/images/icon/favorite.svg') center center / cover;
 		}
 
-		&.--cart::before {
+		&_cart::before {
 			background: url('../../assets/images/icon/cart.svg') center center / cover;
 		}
 
